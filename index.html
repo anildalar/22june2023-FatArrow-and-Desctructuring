@@ -4,8 +4,59 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>JS ES6 FatArrow function</title>
+        
+        <script>
+
+        </script>
     </head>
     <body>
         
+        <script>
+              
+            //1.Define
+            //
+            function myFunctionA(...n1){ //Old way 1995 - 2023
+                // This is function body
+                //Statemetns
+                console.log('-->',n1[0]);
+
+                //Every function may return something number,string,array,object,function
+                return 10+n1[0]; // i am return number
+            }
+            //New way ES6 2015 Fat Arrow  myFunctionB 
+            let myFunctionB=(...n2)=>{ // n2 is a formar arguemtn with rest opertor
+                console.log(n2[0]);
+                var a=20; // Local Variable
+                //Every function return somethign
+                return a + n2[0];
+            }
+
+            let myFunctionC = n3 =>{ // m3 is formal argument
+                console.log(n3);
+                //Every function may return something
+            }
+
+
+            const myFunctionD = (n4,n5)=>{ 
+
+                //Every function may return something
+                return n4+n5;
+            }
+
+            //2. Call
+            let x = myFunctionA(1);
+            console.log(x);
+            
+            var y = myFunctionB(2);
+            console.log(y);
+
+            console.log(x+y)
+
+            myFunctionC(50);
+
+            console.log(myFunctionD(5,4));
+
+            
+        </script>
     </body>
 </html>
